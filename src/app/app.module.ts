@@ -14,6 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { StatComponent } from './pages/stat/stat.component';
 import { StatHandlerComponent } from './pageparts/stat-handler/stat-handler.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
+import { ReviewComponent } from './pages/review/review.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { StatHandlerComponent } from './pageparts/stat-handler/stat-handler.comp
     HistoryNavigationComponent,
     StatComponent,
     StatHandlerComponent,
+    ArticlesComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,
