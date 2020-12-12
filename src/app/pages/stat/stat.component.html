@@ -1,0 +1,83 @@
+<div>
+    <h2>Тестовые ссылки:</h2>
+  <a href="/stat?utm_source=google">?utm_source=google</a>
+  <br />
+  <a href="/stat?utm_source=yandex">?utm_source=yandex</a>
+  <br />
+  <a href="/stat?utm_source=google&utm_content=article"
+    >?utm_source=google&utm_content=article</a
+  >
+  <br />
+  <a href="/stat?utm_source=yandex&utm_content=article"
+    >?utm_source=yandex&utm_content=article</a
+  >
+  <br />
+  <a href="/stat?utm_source=yandex&utm_content=article2&utm_term=angular"
+    >?utm_source=yandex&utm_content=article2&utm_term=angular</a
+  >
+  <br />
+  <a href="/stat?utm_source=yandex&utm_content=article2&utm_term=angular"
+    >?utm_source=yandex&utm_content=article2&utm_term=angular</a
+  >
+  <br />
+  <a href="/stat?utm_source=google&utm_content=article2&utm_medium=alisa&utm_term=angular"
+    >?utm_source=google&utm_content=article2&utm_medium=alisa&utm_term=angular</a
+  >
+  <br />
+  <a href="/stat?utm_source=google&utm_content=article2&utm_medium=meduza&utm_term=angular"
+    >?utm_source=google&utm_content=article2&utm_medium=meduza&utm_term=angular</a
+  >
+  <br />
+  <a href="/stat?utm_source=google&utm_content=article5&utm_medium=alisa&utm_campaign=adworks&utm_term=angulardirectives"
+    >?utm_source=google&utm_content=article5&utm_medium=alisa&utm_campaign=adworks&utm_term=angulardirectives</a
+  >
+  <br />
+  <a href="/stat?utm_source=yandex&utm_content=overview&utm_medium=lenta&utm_campaign=googleads&utm_term=angularmodules"
+    >?utm_source=yandex&utm_content=overview&utm_medium=lenta&utm_campaign=googleads&utm_term=angularmodules</a
+  >
+  <br />
+  <a href="/stat?utm_source=yandex&utm_content=article2&utm_term=angular"
+    >?utm_source=yandex&utm_content=article2&utm_term=angular</a
+  >
+  <a href="/stat?utm_source=google&utm_content=article5&utm_medium=alisa&utm_campaign=adworks&utm_term=angulardecorators"
+    >?utm_source=google&utm_content=article5&utm_medium=alisa&utm_campaign=adworks&utm_term=angulardecorators</a
+  >
+  <br />
+  <a href="/stat?utm_source=google&utm_content=article7&utm_medium=meduza&utm_campaign=googleads&utm_term=angulardecorators"
+    >?utm_source=google&utm_content=article7&utm_medium=meduza&utm_campaign=googleads&utm_term=angulardecorators</a
+  >
+  <br />
+</div>
+
+<div>
+    <h2>Статистика посещений:</h2>
+  utm_source
+  <select #utm_source_select (change)="setFilter('utm_source', $event.target.value)">
+      <option></option>
+      <option *ngFor="let utm of utm_source">{{utm}}</option>
+  </select>
+  utm_medium
+  <select #utm_medium_select (change)="setFilter('utm_medium', $event.target.value)">
+    <option></option>
+    <option *ngFor="let utm of utm_medium">{{utm}}</option>
+  </select>
+  utm_campaign
+  <select #utm_campaign_select (change)="setFilter('utm_campaign', $event.target.value)">
+    <option></option>
+    <option *ngFor="let utm of utm_campaign">{{utm}}</option>
+  </select>
+  utm_content
+  <select #utm_content_select (change)="setFilter('utm_content', $event.target.value)">
+    <option></option>
+    <option *ngFor="let utm of utm_content">{{utm}}</option>
+  </select>
+  utm_term
+  <select #utm_term_select (change)="setFilter('utm_term', $event.target.value)">
+    <option></option>
+    <option *ngFor="let utm of utm_term">{{utm}}</option>
+  </select>
+
+  <h4>Посещенные страницы:</h4>
+  <div #visitedPages>
+  </div>
+</div>

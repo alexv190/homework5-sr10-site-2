@@ -1,0 +1,15 @@
+<mat-card class="example-card" *ngFor="let project of projects">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{project.name}}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      {{project.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [href]="project.link">Страница проекта</a>
+  </mat-card-actions>
+</mat-card>
